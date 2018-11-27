@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rasengan 1.0</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: #000;
+        }
+
+
+        .ma {
+            width: 280px;
+            height: 280px;
+            background: -webkit-radial-gradient(center, #fff, rgba(55, 175, 255, 0.5) 25%, rgba(55, 175, 255, 0) 75%, rgba( 0, 0, 0, 0));
+            margin: 350px auto;
+            position: relative;
+            border-radius: 50%;
+            transform-style: preserve-3d;
+            transition: all 1s;
+        }
+
+        @keyframes ap {
+            0% {
+                opacity: 0;
+                filter: Alpha(opacity=0);
+            }
+            100% {
+                opacity: 1;
+                filter: Alpha(opacity=100);
+            }
+        }
+
+        .mm {
+            width: 200px;
+            height: 200px;
+            /* border: 1px solid red; */
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            margin: auto;
+            transform: translateZ(150px);
+            transform-style: preserve-3d;
+        }
+
+        .main {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            transform: translateZ(100px);
+            transform-style: preserve-3d;
+            box-sizing: border-box;
+        }
+
+        .mm .main:first-child {
+            animation: main1 120s 0s linear infinite;
+        }
+
+        .mm .main:last-child {
+            animation: main2 120s 0s linear infinite;
+        }
+
+        @keyframes main1 {
+            0% {
+                transform: rotateZ(0);
+            }
+            100% {
+                transform: rotateZ(3600deg);
+            }
+        }
+
+        @keyframes main2 {
+            0% {
+                transform: rotateZ(0);
+            }
+            100% {
+                transform: rotateZ(-3600deg);
+            }
+        }
+
+        .m,
+        .n,
+        .m1,
+        .n1 {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            transform-style: preserve-3d;
+            box-sizing: border-box;
+        }
+
+        .m {
+            animation: mp 120s 0s linear infinite;
+        }
+
+        .n,
+        .m1,
+        .n1 {
+            animation: np 120s 0s linear infinite;
+        }
+
+        @keyframes mp {
+            0% {
+
+                transform: rotateY(0);
+            }
+            100% {
+                transform: rotateY(36000deg);
+            }
+        }
+
+        @keyframes np {
+            0% {
+
+                transform: rotateX(0);
+            }
+            100% {
+                transform: rotateX(36000deg);
+            }
+        }
+
+        .m div,
+        .n div,
+        .m1 div,
+        .n1 div {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 1px solid rgba(55, 175, 255, 0.5);
+            box-sizing: border-box;
+            position: absolute;
+            background: -webkit-radial-gradient(center, #fff 24%, rgba(55, 175, 255, 0.5) 25%, rgba(55, 175, 255, 0) 26%);
+        }
+
+        .build {
+            width: 150px;
+            height: 30px;
+            display: block;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            text-decoration: none;
+            line-height: 30px;
+            text-align: center;
+            border: 2px solid #6cf;
+            color: #6cf;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="perspective: 1000px;">
+        <div class="ma">
+            <div class="mm">
+                <div class="main">
+                    <div class="m">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div style="transform: translate(70px,30px) rotateZ(45deg)">
+                        <div class="m1">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="n">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div style="transform: translate(-70px,30px) rotateZ(-45deg)">
+                        <div class="n1">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="m">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div style="transform: translate(70px,30px) rotateZ(45deg)">
+                        <div class="m1">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="n">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div style="transform: translate(-70px,30px) rotateZ(-45deg)">
+                        <div class="n1">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="build" href="https://github.com/ADBin/Rasengan">Build By ADBin</a>
+
+    <script>
+        window.onload = function () {
+            var om = document.getElementsByClassName('m')
+            console.log(om);
+            var adiv = om[0].getElementsByTagName('div');
+            var deg = 180 / adiv.length;  // 求出每个环旋转的角度
+            for (var i = 0; i < adiv.length; i++) {
+                adiv[i].style.transform = "rotateY(" + i * deg + "deg)"; 
+            }
+            var on = document.getElementsByClassName('n')
+            var adiv = on[0].getElementsByTagName('div');
+            for (var i = 0; i < adiv.length; i++) {
+                adiv[i].style.transform = "rotateX(" + i * deg + "deg)"; 
+            }
+            var om1 = document.getElementsByClassName('m1')
+            var adiv = om1[0].getElementsByTagName('div');
+            for (var i = 0; i < adiv.length; i++) {
+                adiv[i].style.transform = "rotateX(" + i * deg + "deg)"; 
+
+            }
+            var on1 = document.getElementsByClassName('n1')
+            var adiv = on1[0].getElementsByTagName('div');
+            for (var i = 0; i < adiv.length; i++) {
+                adiv[i].style.transform = "rotateX(" + i * deg + "deg)"; 
+            }
+
+            //----------------------------------
+            var adiv = om[1].getElementsByTagName('div');
+            var deg = 180 / adiv.length;
+            for (var i = 0; i < adiv.length; i++) {
+
+                adiv[i].style.transform = "rotateY(" + i * deg + "deg)"; 
+            }
+            var on = document.getElementsByClassName('n')
+            var adiv = on[1].getElementsByTagName('div');
+            for (var i = 0; i < adiv.length; i++) {
+                adiv[i].style.transform = "rotateX(" + i * deg + "deg)"; 
+            }
+            var om1 = document.getElementsByClassName('m1')
+            var adiv = om1[1].getElementsByTagName('div');
+            for (var i = 0; i < adiv.length; i++) {
+                adiv[i].style.transform = "rotateX(" + i * deg + "deg)"; 
+
+            }
+            var on1 = document.getElementsByClassName('n1')
+            var adiv = on1[1].getElementsByTagName('div');
+            for (var i = 0; i < adiv.length; i++) {
+                adiv[i].style.transform = "rotateX(" + i * deg + "deg)"; 
+            }
+
+
+            var mm = document.getElementsByClassName("ma");
+            //----------------  3D 拖拽  ------------------
+            var nowX, nowY,
+                lastX, lastY,
+                minusX, minusY,
+                roX = 0, roY = 0;
+            document.onmousedown = function (e) {
+                var e = e || window.event;
+                lastX = e.clientX;
+                lastY = e.clientY;
+                this.onmousemove = function (e) {
+                    var e = e || window.event;
+                    nowX = e.clientX;
+                    nowY = e.clientY;
+
+                    minusX = nowX - lastX;
+                    minusY = nowY - lastY;
+
+                    roY += minusX;
+                    roX -= minusY;
+
+                    mm[0].style.transform = "rotateX(" + roX + "deg) rotateY(" + roY + "deg)";
+
+                    lastX = nowX;
+                    lastY = nowY;
+                }
+                this.onmouseup = function (e) {
+                    this.onmousemove = null;
+                    this.onmouseup = null;
+                }
+            }
+        }
+        /*
+        ***************************
+        **      Rasengan 1.0     **
+        **     build by ADBin    **
+        ***************************
+        */
+    </script>
+</body>
+
+</html>
