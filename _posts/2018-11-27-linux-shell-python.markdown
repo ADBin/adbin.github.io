@@ -10,12 +10,12 @@ categories: linux shell
 
 test.sh
 ```shell
-    python /.../test.py
+python /.../test.py
 ```
 
 test.py
 ```python
-    print('test')
+print('test')
 ```
 
 ### 用shell传参数调用python
@@ -23,9 +23,9 @@ test.py
 
 test.sh
 ```shell
-    a=1
-    b=2
-    python /.../test.py $a $b
+a=1
+b=2
+python /.../test.py $a $b
 ```
 
 test.py
