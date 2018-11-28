@@ -4,7 +4,6 @@ title:  "终端调用 vlc 播放器"
 date:   2018-11-28 16:30:45
 categories: linux vlc
 ---
-[原文地址](https://github.com/ADBin/adbin.github.io/blob/master/_posts/2018-11-28-linux-vlc.markdown)
 
 ### 终端调用 vlc 播放器
 
@@ -39,3 +38,10 @@ categories: linux vlc
         
         2.添加播放歌曲到播放列表：
             按 **B** 进入文件浏览，然后用方向键 **光标** 选中歌曲，按 **回车** 选择
+            
+            
+[原文地址](https://github.com/ADBin/adbin.github.io/blob/master/_posts/2018-11-28-linux-vlc.markdown)
+
+
+
+
