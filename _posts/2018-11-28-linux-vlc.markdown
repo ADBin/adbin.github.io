@@ -16,14 +16,16 @@ categories: linux vlc
     - 按键说明（按 H/h 可以直接观看）
         ![avatar](https://github.com/ADBin/adbin.github.io/blob/master/images/vlc/vlc_help.png)
     - 常用按键
-        |按键|作用|
-        |:--:|--:|
-        |a|音量增|
-        |z|音量减|
-        |m|静音|
-        |n|下一曲|
-        |p|上一曲|
-        |g|定位到当前播放歌曲|
+    
+        | 按键 | 作用 |
+        | :--: | --: |
+        | a | 音量增 |
+        | z | 音量减 |
+        | m | 静音 |
+        | n | 下一曲 |
+        | p | 上一曲 |
+        | g | 定位到当前播放歌曲 |
+        
     - 文件浏览器 (按 **B** 进入)
 
         1.添加播放目录到播放列表：
