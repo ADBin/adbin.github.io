@@ -15,7 +15,7 @@ categories: linux vlc
 
     - 按键说明（按 H/h 可以直接观看）
     
-        ![]("../images/vlc/vlc_help.png")
+        ![ ](../../../../../images/vlc/vlc_help.png)
         
     - 常用按键
     
