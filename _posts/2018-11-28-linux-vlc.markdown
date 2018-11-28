@@ -15,8 +15,10 @@ categories: linux vlc
 
     - 按键说明（按 H/h 可以直接观看）
     
-        <img src="https://github.com/ADBin/adbin.github.io/blob/master/images/vlc/vlc_help.png" width="80%" alt="" srcset="">        
+        <img src="https://github.com/ADBin/adbin.github.io/blob/master/images/vlc/vlc_help.png" width="80%" alt="" srcset="">  
+        
         [图片](https://github.com/ADBin/adbin.github.io/blob/master/images/vlc/vlc_help.png)
+        
     - 常用按键
     
         | 按键 | 作用 |
