@@ -16,9 +16,7 @@ categories: linux vlc
 
     - 按键说明（按 H/h 可以直接观看）
     
-        <img src="../../../../../images/vlc/vlc_help.png" width="80%" alt="" srcset="">  
-        
-        [按键说明](https://github.com/ADBin/adbin.github.io/blob/master/images/vlc/vlc_help.png)
+        <img src="https://raw.githubusercontent.com/ADBin/adbin.github.io/master/images/vlc/vlc_help.png" width="80%" alt="" srcset="">              
         
     - 常用按键
     
@@ -41,7 +39,7 @@ categories: linux vlc
             按 **B** 进入文件浏览，然后用方向键 **光标** 选中歌曲，按 **回车** 选择
             
             
-[原文地址](https://github.com/ADBin/adbin.github.io/blob/master/_posts/2018-11-28-linux-vlc.markdown)
+
 
 
 
