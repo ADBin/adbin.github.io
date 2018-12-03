@@ -42,11 +42,11 @@ categories: linux centos 7 mysql
     **登录**  
     ```shell
     mysql -u root -p
-    ```    
+    ```  
     **初始密码**  
     ```shell
     grep 'temporary password' /var/log/mysqld.log
-    ```
+    ```  
     **进入mysql后，设置密码**  
     ```shell
     mysql>set password for 'root'@'localhost'=password('密码');
