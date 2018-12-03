@@ -32,10 +32,12 @@ categories: linux centos 7 mysql
     ```shell
     yum install mysql-community-server
     ```
+    
 3.启动mysql服务
     ```shell
     systemctl start mysqld
     ```
+    
 4.修改密码（首次登录均要修改）
     **登录**    
     ```shell
