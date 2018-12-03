@@ -40,7 +40,7 @@ categories: linux centos 7 mysql
     ```
     
 4. 修改密码（首次登录均要修改）  
-    **登录**  
+  **登录**  
     ```shell
     mysql -u root -p
     ```  
