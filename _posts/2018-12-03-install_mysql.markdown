@@ -34,7 +34,7 @@ categories: linux centos 7 mysql
     yum install mysql-community-server
     ```
     
-3、启动mysql服务
+3、启动mysql服务  
     ```shell
     systemctl start mysqld
     ```
