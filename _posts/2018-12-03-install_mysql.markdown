@@ -38,7 +38,7 @@ categories: linux centos 7 mysql
     systemctl start mysqld
     ```
 
-4. 修改密码
+4. 修改密码  
     **登录**
     ```shell
     mysql -u root -p
