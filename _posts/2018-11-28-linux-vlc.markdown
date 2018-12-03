@@ -10,7 +10,9 @@ categories: linux vlc
 #### 测试环境 ubuntu
 - 启动命令：
 
->vlc -I ncurses
+```shell
+vlc -I ncurses
+```
 
 - 简单使用：
 
