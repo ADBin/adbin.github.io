@@ -29,26 +29,32 @@ categories: linux centos 7 mysql
 	比如要安装5.6版本，将5.7源的enabled=1改成enabled=0。然后再将5.6源的enabled=0改成enabled=1即可。
 
 2.安装mysql
+
     ```shell
     yum install mysql-community-server
     ```
 
 3.启动mysql服务
+
     ```shell
     systemctl start mysqld
     ```
 
 4.修改密码（首次登录均要修改）
-    **登录**    
+    **登录**   
+    
     ```shell
     mysql -u root -p
     ```
+    
     **初始密码**
+    
     ```shell
     grep 'temporary password' /var/log/mysqld.log
     ```
 
     **进入mysql后，设置密码**
+    
     ```shell
     mysql>set password for 'root'@'localhost'=password('密码');
     ```
