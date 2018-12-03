@@ -28,13 +28,13 @@ categories: linux centos 7 mysql
     可以修改vim /etc/yum.repos.d/mysql-community.repo源，改变默认安装的mysql版本。
 	比如要安装5.6版本，将5.7源的enabled=1改成enabled=0。然后再将5.6源的enabled=0改成enabled=1即可。
 
-2.安装mysql
-    ```shell
+2.安装mysql  
+  ```shell
     yum install mysql-community-server
     ```
     
 3.启动mysql服务
-    ```shell
+  ```shell
     systemctl start mysqld
     ```
     
