@@ -17,9 +17,9 @@ categories: chrome
      
    standalone=1 ：确认下载离线安装包    
    
-二、linux平台
+二、linux平台（**ubuntu**）
 
-   1. 下载deb包（**ubuntu**）
+   1. 下载deb包
        
       - 32位
       
