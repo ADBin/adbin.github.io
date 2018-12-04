@@ -7,7 +7,7 @@ categories: linux centos 7 mysql
 
 ### centos7安装mysql5.7
 一、配置YUM源
-   1. 在MySQL官网中下载YUM源rpm安装包：https://dev.mysql.com/downloads/repo/yum/
+   1. 在MySQL官网中下载YUM源rpm安装包：[https://dev.mysql.com/downloads/repo/yum/](https://dev.mysql.com/downloads/repo/yum/)
 
    2. **下载mysql源安装包**
       ```shell
