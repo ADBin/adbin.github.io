@@ -15,7 +15,9 @@ categories: chrome
 
       - https://www.google.cn/chrome/thank-you.html?platform=win64&standalone=1
      
-      standalone=1 ：确认下载离线安装包    
+      standalone=1 ：确认下载离线安装包
+      
+      参考[地址](https://blog.csdn.net/aosica321/article/details/78093597)
    
 二、linux平台（**ubuntu**）
 
@@ -33,7 +35,7 @@ categories: chrome
         wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
         ```
         
-      - 直接浏览器下载
+      - 直接浏览器下载(一般会自动识别**deb包**或者**rpm包**)
       
          网址 [https://www.google.cn/chrome](https://www.google.cn/chrome)
       
