@@ -8,19 +8,19 @@ categories: linux vlc
 ### 终端调用 vlc 播放器
 
 #### 测试环境 ubuntu
-- 启动命令：
+一、启动命令：
 
-```shell
-vlc -I ncurses
-```
+   ```shell
+   vlc -I ncurses
+   ```
 
-- 简单使用：
+二、简单使用：
 
-    - 按键说明（按 H/h 可以直接观看）
+   1. 按键说明（按 H/h 可以直接观看）
     
         <img src="https://raw.githubusercontent.com/ADBin/adbin.github.io/master/images/vlc/vlc_help.png" width="100%"  alt="" srcset="">   
         
-    - 常用按键
+   2. 常用按键
     
         | 按键 | 作用 |
         | :--: | --: |
@@ -32,7 +32,7 @@ vlc -I ncurses
         | g | 定位到当前播放歌曲 |
         | D | 从播放列表中删除目录/歌曲 |
         
-    - 文件浏览器 (按 **B** 进入)
+   3. 文件浏览器 (按 **B** 进入)
 
         1.添加播放目录到播放列表：
             按 **B** 进入文件浏览，然后用方向键 **光标** 选中目录，按 **空格** 选择
