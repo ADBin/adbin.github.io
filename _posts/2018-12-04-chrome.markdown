@@ -15,7 +15,7 @@ categories: chrome
 
       - https://www.google.cn/chrome/thank-you.html?platform=win64&standalone=1
      
-   standalone=1 ：确认下载离线安装包    
+      standalone=1 ：确认下载离线安装包    
    
 二、linux平台（**ubuntu**）
 
@@ -36,7 +36,7 @@ categories: chrome
       - 直接浏览器下载
       
          网址 [https://www.google.cn/chrome](https://www.google.cn/chrome)
-        
+      
         
    2. 安装
    
@@ -51,7 +51,8 @@ categories: chrome
         ```shell
         sudo apt-get -f install 
         ```
-   参考[地址](https://blog.csdn.net/cscrazybing/article/details/78640322)
+        
+      参考[地址](https://blog.csdn.net/cscrazybing/article/details/78640322)
 
 
 
