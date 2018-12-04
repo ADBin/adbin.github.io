@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "centos7安装mysql5.7"
-date:   2018-11-28 16:30:45
+date:   2018-12-03 17:30:45
 categories: linux centos 7 mysql
 ---
 
