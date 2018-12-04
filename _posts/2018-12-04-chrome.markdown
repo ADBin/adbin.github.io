@@ -51,7 +51,7 @@ categories: chrome
         ```shell
         sudo apt-get -f install 
         ```
-   
+   参考[地址](https://blog.csdn.net/cscrazybing/article/details/78640322)
 
 
 
