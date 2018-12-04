@@ -5,13 +5,53 @@ date:   2018-12-04 15:35:45
 categories: chrome
 ---
 
-一、64位地址
+一、windowns平台
 
-   - https://www.google.cn/chrome/thank-you.html?platform=win64&standalone=1
+   1. 64位地址
+
+      - https://www.google.cn/chrome/thank-you.html?platform=win64&standalone=1
    
-二、32位地址
+   2. 32位地址
 
-   - https://www.google.cn/chrome/thank-you.html?platform=win64&standalone=1
+      - https://www.google.cn/chrome/thank-you.html?platform=win64&standalone=1
+     
+   standalone=1 ：确认下载离线安装包    
+   
+二、linux平台
+
+   1. 下载deb包（**ubuntu**）
+       
+      - 32位
+      
+        ```shell
+        wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
+        ```
+        
+      - 64位
+      
+        ```shell
+        wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
+        ```
+        
+      - 直接浏览器下载
+      
+         网址 [https://www.google.cn/chrome](https://www.google.cn/chrome)
+        
+        
+   2. 安装
+   
+      - 安装命令
+      
+        ```shell
+        sudo dpkg -i google-chrome*
+        ```
+        
+      - 补全依赖命令
+      
+        ```shell
+        sudo apt-get -f install 
+        ```
    
 
-standalone=1 ：确认下载离线安装包 
+
+
