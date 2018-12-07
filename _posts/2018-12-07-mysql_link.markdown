@@ -9,6 +9,10 @@ categories: linux centos 7 mysql link
 
 #### 需要打开防火墙的3306（mysql默认）端口
 
+```shell
+firewall-cmd --zone=public --add-port=3306/tcp --permanent
+```
+
 一、进入mysql
 
    ```shell
