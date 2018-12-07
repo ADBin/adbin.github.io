@@ -28,7 +28,7 @@ firewall-cmd --zone=public --add-port=3306/tcp --permanent
 三、修改user表
 
    ```shell
-   update user set host='%' where user='root'
+   update user set host='%' where user='root';
    ```
 
 >**注意：** 有些user表里会有多个root用户，选择其中一个进行修改
