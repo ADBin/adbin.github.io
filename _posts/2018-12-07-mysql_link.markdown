@@ -27,18 +27,18 @@ categories: linux centos 7 mysql link
    update user set host='%' where user='root'
    ```
 
-   >**注意：**有些user表里会有多个root用户，选择其中一个进行修改
+>**注意：** 有些user表里会有多个root用户，选择其中一个进行修改
 
 四、使配置生效
 
-   - **方法一：**重启mysql
+   1. 方法一：重启mysql
    
-     ```shell
-     systemctl restart mysqld
-     ```
+      ```shell
+      systemctl restart mysqld
+      ```
     
-   - **方法二：**刷新mysql的权限表
+   2. 方法二：刷新mysql的权限表
 
-     ```shell
-     mysql>flush privileges;
-     ```
+      ```shell
+      mysql>flush privileges;
+      ```
