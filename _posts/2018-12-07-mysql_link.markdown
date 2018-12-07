@@ -2,10 +2,10 @@
 layout: post
 title:  "mysql5.7简单实现外部访问"
 date:   2018-12-07 16:42:45
-categories: linux centos 7 mysql link
+categories: linux mysql link
 ---
 
-### mysql5.7简单实现外部访问
+### mysql5.7简单实现外部访问 （centos7）
 
 #### 需要打开防火墙的3306（mysql默认）端口
 
