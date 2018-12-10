@@ -5,7 +5,7 @@ date:   2018-12-04 15:35:45
 categories: chrome
 ---
 
-一、windowns平台
+一、Windows平台
 
    1. 64位地址
 
@@ -19,7 +19,7 @@ categories: chrome
       
       参考[地址](https://blog.csdn.net/aosica321/article/details/78093597)
    
-二、linux平台（**ubuntu**）
+二、Linux平台（**Ubuntu**）
 
    1. 下载deb包
        
