@@ -1,9 +1,11 @@
 <div class="waifu">
       <!--  <div class="waifu-tips"></div>-->
-        <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
-    </div>
+    <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+</div>
     <!-- <script async src="path/to/waifu-tips.js"></script> -->
-    
+<div id="snow-wrapper">
+    <div id="snow"></div>
+</div>
 <footer class="site-footer">
 
   <div class="wrapper">
@@ -25,5 +27,6 @@
         /*console.log("现在是PC端")*/
           loadlive2d("live2d", "https://adbin.github.io/live2d/33/33.json");
           $('.site-footer').css("margin-top","80px");
+          $( "#snow" ).fallingSnow();
     }
 </script>
