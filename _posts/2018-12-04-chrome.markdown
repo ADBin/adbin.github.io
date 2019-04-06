@@ -13,7 +13,7 @@ categories: chrome
    
    2. 32位地址
 
-      - https://www.google.cn/chrome/thank-you.html?platform=win64&standalone=1
+      - https://www.google.cn/chrome/thank-you.html?platform=win32&standalone=1
      
       standalone=1 ：确认下载离线安装包
       
