@@ -46,9 +46,11 @@ categories: linux centos 7 GCC
 	    
        base_url='ftp://gcc.gnu.org/pub/gcc/infrastructure/'  (这个自带的源很慢，是国外的源) 
    
-       改为可用的下载源，如：
+       改为可用的下载源，如： 
+       
 		base_url='http://mirror.linux-ia64.org/gnu/gcc/infrastructure/'
-		base_url='http://www.mirrorservice.org/sites/sourceware.org/pub/gcc/infrastructure/'               
+		base_url='http://www.mirrorservice.org/sites/sourceware.org/pub/gcc/infrastructure/'  
+		
        出现报错可以去看最下面的**参考地址** 
 	    
    2. 方法2，自己下载
