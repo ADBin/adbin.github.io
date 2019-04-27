@@ -51,7 +51,7 @@ categories: linux centos 7 GCC
 		base_url='http://mirror.linux-ia64.org/gnu/gcc/infrastructure/'
 		base_url='http://www.mirrorservice.org/sites/sourceware.org/pub/gcc/infrastructure/'  
 		
-       出现报错可以去看最下面的**参考地址** 
+       出现报错可以去看最下面的**参考地址1** 
 	    
    2. 方法2，自己下载
         (1)根据 ./contrib/download_prerequisites 文件下载对应版本的包
@@ -113,5 +113,6 @@ categories: linux centos 7 GCC
     gcc -v&&g++ -v
     ```
 
-参考[地址1](http://www.pianshen.com/article/650181603/)
+参考[地址1](http://www.pianshen.com/article/650181603/) 
+
 参考[地址2](https://blog.csdn.net/davidhopper/article/details/79681695)
