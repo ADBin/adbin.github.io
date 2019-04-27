@@ -7,14 +7,14 @@ categories: linux centos 7 GCC
 
 ### Centos 7.5(1804) 编译安装GCC 8.2.0
 
-一、安装基本环境 
+一、安装基本环境
 
     ```shell
     yum groupinstall -y 'Development Tools'
     yum install -y wget
-    ```  
+    ```
 
-二、下载GCC8.2.0源码包（引用中科大开源镜像站GCC） 
+二、下载GCC8.2.0源码包（引用中科大开源镜像站GCC）
 
     ```shell
     wget https://mirrors.ustc.edu.cn/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.gz
