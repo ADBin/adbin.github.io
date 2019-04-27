@@ -9,36 +9,36 @@ categories: linux centos 7 GCC
 
 一、安装基本环境
 
-    ```shell
-    yum groupinstall -y 'Development Tools'
-    yum install -y wget
-    ```
+```shell
+yum groupinstall -y 'Development Tools'
+yum install -y wget
+```
 
 二、下载GCC8.2.0源码包（引用中科大开源镜像站GCC）
 
-    ```shell
-    wget https://mirrors.ustc.edu.cn/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.gz
-    ```
+```shell
+wget https://mirrors.ustc.edu.cn/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.gz
+```
 
 三、解压源码包 
 
-    ```shell
-    tar -zxf gcc-8.2.0.tar.gz
-    ```
+```shell
+tar -zxf gcc-8.2.0.tar.gz
+```
 
 四、进入工作目录 
 
-    ```shell
-    cd gcc-8.2.0
-    ```
+```shell
+cd gcc-8.2.0
+```
 
 五、下载所需依赖库  
 
    1. 方法1，用自带的脚本自动下载和设置依赖库 
 	
-        ```shell
-        ./contrib/download_prerequisites
-        ```
+```shell
+./contrib/download_prerequisites
+```
       (1)如果要替换下载源
             ```shell
             vim ./contrib/download_prerequisites
