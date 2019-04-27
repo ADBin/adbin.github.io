@@ -12,7 +12,7 @@ categories: linux centos 7 GCC
     ```shell
     yum groupinstall -y 'Development Tools'
     yum install -y wget
-    ```
+    ```  
 
 二、下载GCC8.2.0源码包（引用中科大开源镜像站GCC） 
 
