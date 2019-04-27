@@ -36,13 +36,14 @@ cd gcc-8.2.0
 
    1. 方法1，用自带的脚本自动下载和设置依赖库 
 	
-```shell
-./contrib/download_prerequisites
-```
+      ```shell
+      ./contrib/download_prerequisites
+      ``` 
+      
       (1)如果要替换下载源
-            ```shell
-            vim ./contrib/download_prerequisites
-            ``` 
+      ```shell
+      vim ./contrib/download_prerequisites
+      ``` 
 	    
        base_url='ftp://gcc.gnu.org/pub/gcc/infrastructure/'  (这个自带的源很慢，是国外的源) 
    
@@ -57,61 +58,61 @@ cd gcc-8.2.0
         (1)根据 ./contrib/download_prerequisites 文件下载对应版本的包
         如 
 	
-            ```shell
-            ./contrib/download_prerequisites 文件
-                gmp='gmp-6.1.0.tar.bz2'
-                mpfr='mpfr-3.1.4.tar.bz2'
-                mpc='mpc-1.0.3.tar.gz'
-                isl='isl-0.18.tar.bz2'
-            ``` 
+      ```shell
+      ./contrib/download_prerequisites 文件
+          gmp='gmp-6.1.0.tar.bz2'
+          mpfr='mpfr-3.1.4.tar.bz2'
+          mpc='mpc-1.0.3.tar.gz'
+          isl='isl-0.18.tar.bz2'
+      ``` 
 	    
         (2)解压所下载的压缩包 
 	
-            ```shell
+      ```shell
             tar -jxf gmp-6.1.0.tar.bz2
             tar -jxf mpfr-3.1.4.tar.bz2
             tar -zxf mpc-1.0.3.tar.gz
             tar -jxf isl-0.18.tar.bz2
-            ``` 
+      ``` 
 	    
         (3)建立软连接 
 	
-            ```shell
+      ```shell
             ln -s gmp-6.1.0 gmp
             ln -s mpfr-3.1.4 mpfr
             ln -s mpc-1.0.3 mpc
-            ``` 
+      ``` 
 	    
 六、创建并进入编译目录 
 
-    ```shell
-    mkdir bulid
-    cd build
-    ```
+```shell
+mkdir bulid
+cd build
+```
 
 七、生成编译所需Makefile文件 
 
-    ```shell
-    ../configure -enable-checking=release -enable-languages=c,c++ -disable-multilib
-    ``` 
+```shell
+../configure -enable-checking=release -enable-languages=c,c++ -disable-multilib
+``` 
     
 八、编译（可能要很长一段时间） 
 
-    ```shell
-    make
-    ``` 
+```shell
+make
+``` 
     
 九、安装 
 
-    ```shell
-    make install
-    ``` 
+```shell
+make install
+``` 
     
 十、版本检查 
 
-    ```shell
-    gcc -v&&g++ -v
-    ```
+```shell
+gcc -v&&g++ -v
+```
 
 参考[地址1](http://www.pianshen.com/article/650181603/) 
 
