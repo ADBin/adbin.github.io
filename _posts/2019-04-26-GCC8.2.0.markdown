@@ -86,7 +86,7 @@ cd gcc-8.2.0
 六、创建并进入编译目录 
 
 ```shell
-mkdir bulid
+mkdir build
 cd build
 ```
 
