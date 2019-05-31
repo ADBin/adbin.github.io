@@ -55,7 +55,9 @@ cd gcc-8.2.0
        出现报错可以去看最下面的**参考地址2** 
 	    
    2. 方法2，自己下载
+        
         (1)根据 ./contrib/download_prerequisites 文件下载对应版本的包
+        
         如 
 	
       ```shell
