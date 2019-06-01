@@ -68,9 +68,13 @@ cd gcc-8.2.0
           isl='isl-0.18.tar.bz2'
       ``` 
 	    
-        (2)解压所下载的压缩包 
+        (2)下载和解压所下载的压缩包 
 	
       ```shell
+      wget https://adbin.top/packages/gcc-8.2.0/gmp-6.1.0.tar.bz2
+      wget https://adbin.top/packages/gcc-8.2.0/mpfr-3.1.4.tar.bz2
+      wget https://adbin.top/packages/gcc-8.2.0/mpc-1.0.3.tar.gz
+      wget https://adbin.top/packages/gcc-8.2.0/isl-0.18.tar.bz2
       tar -jxf gmp-6.1.0.tar.bz2
       tar -jxf mpfr-3.1.4.tar.bz2
       tar -zxf mpc-1.0.3.tar.gz
