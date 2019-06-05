@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Chrome离线安装包"
+title:  "Chrome离线安装包下载及安装"
 date:   2018-12-04 15:35:45
 categories: chrome
 ---
@@ -58,8 +58,13 @@ categories: chrome
 
 附录：
    rpm包
-   x64
-   ```shell
-   wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
-   ```
+   
+   - x64
+   
+      ```shell
+      wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+      ```
+     
+   - x32
+      暂时不知道
 
