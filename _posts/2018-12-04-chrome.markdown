@@ -56,5 +56,10 @@ categories: chrome
         
       参考[地址](https://blog.csdn.net/cscrazybing/article/details/78640322)
 
-
+附录：
+   rpm包
+   x64
+   ```shell
+   wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+   ```
 
