@@ -267,13 +267,13 @@
     <script src="https://adbin.github.io/js/Snow.js" type="text/javascript"></script>
     <script>
         window.onload = function () {
-            let snow = new Snow('snow', window.innerWidth - 5, window.innerHeight - 5);
-            snow.start();
+            let sno = new Snow('sn', window.innerWidth - 5, window.innerHeight - 5);
+            sno.start();
             window.onresize = function () {
-             snow.changeCanvasSize(window.innerWidth - 5, window.innerHeight - 5)
+             sno.changeCanvasSize(window.innerWidth - 5, window.innerHeight - 5)
             }
             window.onscroll = function () {
-             snow.changeCanvasSize(document.documentElement.clientWidth + document.documentElement.scrollLeft - 5, document.documentElement.clientHeight + document.documentElement.scrollTop - 5)
+             sno.changeCanvasSize(document.documentElement.clientWidth + document.documentElement.scrollLeft - 5, document.documentElement.clientHeight + document.documentElement.scrollTop - 5)
             }
         }
     </script>
