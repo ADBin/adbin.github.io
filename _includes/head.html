@@ -270,7 +270,8 @@
             let snow = new Snow('snow', window.innerWidth - 5, window.innerHeight - 5);
             snow.start();
             window.onresize = function () {
-                snow.changeCanvasSize(window.innerWidth - 5, window.innerHeight - 5)
+             snow.changeCanvasSize(document.documentElement.clientWidth + document.documentElement.scrollLeft - 5, document.documentElement.clientHeight + document.documentElement.scrollTop - 5)
+
             }
         }
     </script>
