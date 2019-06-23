@@ -24,7 +24,7 @@ categories: linux deb rpm dpkg
 第三步：
 
    ```shell
-   dpkg -i baidunetdisk_2.0.1-2_amd64.deb
+   sudo dpkg -i baidunetdisk_2.0.1-2_amd64.deb
    ```
 
 附：
