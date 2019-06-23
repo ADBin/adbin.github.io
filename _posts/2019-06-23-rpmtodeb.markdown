@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "rpm包转deb包及安装"
+date:   2019-06-23 16:19:22
+categories: linux deb rpm dpkg
+---
+
+### 下面以百度网盘的rpm包为例
+
+系统：Linux Mint 19 Tara
+
+第一步：安装alien
+
+    ```shell 
+    sudo apt install alien
+    ```    
+
+第二步：
+
+    ```shell
+    sudo alien baidunetdisk_linux_2.0.1.rpm
+    ```
+
+第三步：
+
+    ```shell
+    dpkg -i baidunetdisk_2.0.1-2_amd64.deb
+    ```
