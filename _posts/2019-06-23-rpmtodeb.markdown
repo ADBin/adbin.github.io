@@ -7,7 +7,7 @@ categories: linux deb rpm dpkg
 
 ### 下面以百度网盘的rpm包为例
 
-系统：Linux Mint 19 Tara
+**系统**：Linux Mint 19 Tara
 
 第一步：安装alien
 
