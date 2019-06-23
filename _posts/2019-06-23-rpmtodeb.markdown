@@ -11,18 +11,18 @@ categories: linux deb rpm dpkg
 
 第一步：安装alien
 
-    ```shell 
-    sudo apt install alien
-    ```    
+   ```shell 
+   sudo apt install alien
+   ```    
 
 第二步：
 
-    ```shell
-    sudo alien baidunetdisk_linux_2.0.1.rpm
-    ```
+   ```shell
+   sudo alien baidunetdisk_linux_2.0.1.rpm
+   ```
 
 第三步：
 
-    ```shell
-    dpkg -i baidunetdisk_2.0.1-2_amd64.deb
-    ```
+   ```shell
+   dpkg -i baidunetdisk_2.0.1-2_amd64.deb
+   ```
