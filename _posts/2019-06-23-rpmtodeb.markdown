@@ -26,3 +26,9 @@ categories: linux deb rpm dpkg
    ```shell
    dpkg -i baidunetdisk_2.0.1-2_amd64.deb
    ```
+
+附：
+   
+   ```shell
+   alien -r file.deb （可将deb包转为rpm包）
+   ```
