@@ -58,5 +58,11 @@ categories: linux centos 7 mysql
        ```shell
        mysql>set password for 'root'@'localhost'=password('密码');
        ```
+       
+       或
+       
+       ```shell
+       mysql>ALTER USER 'root'@'localhost' IDENTIFIED BY '密码';
+       ```
 
 参考[地址](https://www.linuxidc.com/Linux/2016-09/135288.htm)
