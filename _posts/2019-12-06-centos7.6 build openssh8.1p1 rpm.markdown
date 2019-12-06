@@ -211,14 +211,14 @@ categories: linux centos 7 Openssh rpm
 
 打包及错误参考：
 
-https://www.cnblogs.com/fsckzy/p/10834550.html
+[https://www.cnblogs.com/fsckzy/p/10834550.html](https://www.cnblogs.com/fsckzy/p/10834550.html)
 
-http://www.freesion.com/article/8919180853/
+[http://www.freesion.com/article/8919180853/](http://www.freesion.com/article/8919180853/)
 
-https://blog.51cto.com/13654115/2452631
+[https://blog.51cto.com/13654115/2452631](https://blog.51cto.com/13654115/2452631)
 
-https://blog.csdn.net/hyholine/article/details/7362073
+[https://blog.csdn.net/hyholine/article/details/7362073](https://blog.csdn.net/hyholine/article/details/7362073)
 
-https://www.cnblogs.com/hm-zhang/p/6232076.html
+[https://www.cnblogs.com/hm-zhang/p/6232076.html](https://www.cnblogs.com/hm-zhang/p/6232076.html)
 
-https://blog.csdn.net/watsy/article/details/12611919
+[https://blog.csdn.net/watsy/article/details/12611919](https://blog.csdn.net/watsy/article/details/12611919)
