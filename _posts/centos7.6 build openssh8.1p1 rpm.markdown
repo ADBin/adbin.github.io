@@ -1,0 +1,224 @@
+---
+layout: post
+title:  "Centos 7.6(1810) 打包Openssh8.1p1"
+date:   2019-12-06 17:01:36
+categories: linux centos 7 Openssh rpm
+---
+
+## 环境
+ 
+  ```shell
+  [root@localhost frp_s]# cat /etc/redhat-release
+  CentOS Linux release 7.6.1810 (Core)
+  ```
+
+### 一、创建路径
+  
+  ``` shell
+  mkdir -p /root/rpmbuild/{SOURCES,SPECS}
+  cp openssh-8.1p1.tar.gz /root/rpmbuild/SOURCES/
+  ```
+
+### 二、下载关键源码包
+
+  ``` shell
+  wget https://openbsd.hk/pub/OpenBSD/OpenSSH/portable/openssh-8.1p1.tar.gz
+  (似乎可以不用下载)wget https://src.fedoraproject.org/repo/pkgs/openssh/x11-ssh-askpass-1.2.4.1.tar.gz/8f2e41f3f7eaa8543a2440454637f3c3/x11-ssh-askpass-1.2.4.1.tar.gz
+  ``` 
+
+### 三、制作准备
+
+  ``` shell
+  yum install rpm-build zlib-devel openssl-devel gcc perl-devel pam-devel unzip
+  tar -zxf openssh-8.1p1.tar.gz
+  cp ./openssh-8.1p1/contrib/redhat/openssh.spec .
+  sed -i -e "s/%define no_x11_askpass 0/%define no_x11_askpass 1/g" openssh.spec
+  sed -i -e "s/%define no_gnome_askpass 0/%define no_gnome_askpass 1/g" openssh.spec  
+  ```
+
+### 四、开始制作rpm包
+
+  ``` shell
+  rpmbuild -ba openssh.spec
+  ```
+
+  如果出现 
+  错误：构建依赖失败： openssl-devel < 1.1 被 ?? 需要
+  解决方法：
+  
+  ``` shell
+  vi openssh.spec 注释掉 BuildRequires: openssl-devel < 1.1 这一行
+  ```
+
+  打包完成后:
+
+  ``` shell
+  处理文件：openssh-server-8.1p1-1.el7.x86_64
+  Provides: config(openssh-server) = 8.1p1-1.el7 openssh-server = 8.1p1-1.el7 openssh-server(x86-64) = 8.1p1-1.el7
+  Requires(interp): /bin/sh /bin/sh /bin/sh /bin/sh /bin/sh
+  Requires(rpmlib): rpmlib(CompressedFileNames) <=   3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib  (PayloadFilesHavePrefix) <= 4.0-1
+  Requires(pre): /bin/sh
+  Requires(post): /bin/sh
+  Requires(preun): /bin/sh
+  Requires(postun): /bin/sh
+  Requires: /bin/bash libc.so.6()(64bit) libc.so.6  (GLIBC_2.14)(64bit) libc.so.6(GLIBC_2.16)(64bit)   libc.so.6(GLIBC_2.17)(64bit) libc.so.6(GLIBC_2.2.5)  (64bit) libc.so.6(GLIBC_2.3)(64bit) libc.so.6  (GLIBC_2.3.4)(64bit) libc.so.6(GLIBC_2.4)(64bit)   libc.so.6(GLIBC_2.6)(64bit) libc.so.6(GLIBC_2.8)(64bit)   libcom_err.so.2()(64bit) libcrypt.so.1()(64bit)   libcrypt.so.1(GLIBC_2.2.5)(64bit) libcrypto.so.10()  (64bit) libcrypto.so.10(OPENSSL_1.0.1_EC)(64bit)   libcrypto.so.10(OPENSSL_1.0.2)(64bit) libcrypto.so.10  (libcrypto.so.10)(64bit) libdl.so.2()(64bit)   libgssapi_krb5.so.2()(64bit) libgssapi_krb5.so.2  (gssapi_krb5_2_MIT)(64bit) libk5crypto.so.3()(64bit)   libkrb5.so.3()(64bit) libkrb5.so.3(krb5_3_MIT)(64bit)   libpam.so.0()(64bit) libpam.so.0(LIBPAM_1.0)(64bit)   libresolv.so.2()(64bit) libutil.so.1()(64bit)   libutil.so.1(GLIBC_2.2.5)(64bit) libz.so.1()(64bit) rtld  (GNU_HASH)
+  Obsoletes: ssh-server
+  处理文件：openssh-debuginfo-8.1p1-1.el7.x86_64
+  Provides: openssh-debuginfo = 8.1p1-1.el7   openssh-debuginfo(x86-64) = 8.1p1-1.el7
+  Requires(rpmlib): rpmlib(FileDigests) <= 4.6.0-1 rpmlib  (PayloadFilesHavePrefix) <= 4.0-1 rpmlib  (CompressedFileNames) <= 3.0.4-1
+  检查未打包文件：/usr/lib/rpm/check-files /root/rpmbuild/  BUILDROOT/openssh-8.1p1-1.el7.x86_64
+  写道:/root/rpmbuild/SRPMS/openssh-8.1p1-1.el7.src.rpm
+  写道:/root/rpmbuild/RPMS/x86_64/  openssh-8.1p1-1.el7.x86_64.rpm
+  写道:/root/rpmbuild/RPMS/x86_64/  openssh-clients-8.1p1-1.el7.x86_64.rpm
+  写道:/root/rpmbuild/RPMS/x86_64/  openssh-server-8.1p1-1.el7.x86_64.rpm
+  写道:/root/rpmbuild/RPMS/x86_64/  openssh-debuginfo-8.1p1-1.el7.x86_64.rpm
+  执行(%clean): /bin/sh -e /var/tmp/rpm-tmp.0dMET2
+  + umask 022
+  + cd /root/rpmbuild/BUILD
+  + cd openssh-8.1p1
+  + rm -rf /root/rpmbuild/BUILDROOT/  openssh-8.1p1-1.el7.x86_64
+  + exit 0
+  ```
+
+### 五、进入打包后的文件路径
+
+  ``` shell
+  cd /root/rpmbuild/RPMS/x86_64/
+  ```
+  
+### 六、开始安装
+
+  ``` shell
+  yum install ./openssh-* -y
+  ```
+
+### 七、重启sshd服务
+
+  ``` shell
+  systemctl restart sshd
+  ```
+
+### 八、修改key的权限（可以不改）
+
+  ``` shell
+  chmod 400 /etc/ssh/ssh_host_dsa_key /etc/ssh/ssh_host_ecdsa_key /etc/ssh/ssh_host_ed25519_key
+  ```
+
+### 九、最终效果
+
+  ``` shell
+  [root@localhost x86_64]# ssh -V
+  OpenSSH_8.1p1, OpenSSL 1.0.2k-fips  26 Jan 2017
+  ```
+
+
+### 十、可能会出现的问题
+  
+  - sshd服务重启失败失败信息：
+
+    ``` shell
+    12月 06 15:31:02 localhost.localdomain sshd[19259]:   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  @@@@@
+    12月 06 15:31:02 localhost.localdomain sshd[19259]:     Permissions 0640 for '/etc/ssh/ssh_host_ecdsa_key'   are   too open.
+    12月 06 15:31:02 localhost.localdomain sshd[19259]:   It   is required that your private key files are NOT     accessible by oth12月 06 15:31:02   localhost.localdomain   sshd[19259]: This private key   will be ignored.
+    12月 06 15:31:02 localhost.localdomain sshd[19259]:     Unable to load host key "/etc/ssh/  ssh_host_ecdsa_key":   bad permissio12月 06 15:31:02   localhost.localdomain sshd  [19259]: Unable to load   host key: /etc/ssh/  ssh_host_ecdsa_key
+    12月 06 15:31:02 localhost.localdomain sshd[19259]:     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  @@  @@@
+    12月 06 15:31:02 localhost.localdomain sshd[19259]: @             WARNING: UNPROTECTED PRIVATE KEY FILE!            @
+    12月 06 15:31:02 localhost.localdomain sshd[19259]:     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  @@  @@@
+    12月 06 15:31:02 localhost.localdomain sshd[19259]:     Permissions 0640 for '/etc/ssh/ssh_host_ed25519_key'     are too open.
+    12月 06 15:31:02 localhost.localdomain sshd[19259]:   It   is required that your private key files are NOT     accessible by oth12月 06 15:31:02   localhost.localdomain   sshd[19259]: This private key   will be ignored.
+    12月 06 15:31:02 localhost.localdomain sshd[19259]:     Unable to load host key "/etc/ssh/    ssh_host_ed25519_key": bad permiss12月 06 15:31:02     localhost.localdomain sshd[19259]: Unable to load   host   key: /etc/ssh/ssh_host_ed25519_key
+    12月 06 15:31:02 localhost.localdomain sshd[19259]:     sshd: no hostkeys available -- exiting.
+    12月 06 15:31:02 localhost.localdomain sshd[19259]:   [失  败]
+    12月 06 15:31:02 localhost.localdomain systemd[1]:     sshd.service: control process exited, code=exited     status=1
+    12月 06 15:31:02 localhost.localdomain systemd[1]:     Failed to start SYSV: OpenSSH server daemon.
+    -- Subject: Unit sshd.service has failed
+    -- Defined-By: systemd
+    -- Support: http://lists.freedesktop.org/mailman/    listinfo/systemd-devel
+    --
+    -- Unit sshd.service has failed.
+    --
+    -- The result is failed.
+    12月 06 15:31:02 localhost.localdomain systemd[1]:   Unit   sshd.service entered failed state.
+    12月 06 15:31:02 localhost.localdomain systemd[1]:     sshd.service failed.
+    12月 06 15:31:02 localhost.localdomain polkitd[6249]:     Unregistered Authentication Agent for     unix-process:19253:222797 (slines 2125-2152/2152 (END)
+    12月 06 15:31:02 localhost.localdomain sshd[19259]:     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  @@  @@@
+    12月 06 15:31:02 localhost.localdomain sshd[19259]:     Permissions 0640 for '/etc/ssh/ssh_host_ecdsa_key'   are   too open.
+    12月 06 15:31:02 localhost.localdomain sshd[19259]:   It   is required that your private key files are NOT     accessible by othe12月 06 15:31:02     localhost.localdomain sshd[19259]: This private key     will be ignored.
+    12月 06 15:31:02 localhost.localdomain sshd[19259]:     Unable to load host key "/etc/ssh/  ssh_host_ecdsa_key":   bad permission12月 06 15:31:02   localhost.localdomain   sshd[19259]: Unable to load   host key: /etc/ssh/  ssh_host_ecdsa_key
+    12月 06 15:31:02 localhost.localdomain sshd[19259]:     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  @@  @@@
+    12月 06 15:31:02 localhost.localdomain sshd[19259]: @             WARNING: UNPROTECTED PRIVATE KEY FILE!            @
+    12月 06 15:31:02 localhost.localdomain sshd[19259]:     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  @@  @@@
+    12月 06 15:31:02 localhost.localdomain sshd[19259]:     Permissions 0640 for '/etc/ssh/ssh_host_ed25519_key'     are too open.
+    12月 06 15:31:02 localhost.localdomain sshd[19259]:   It   is required that your private key files are NOT     accessible by othe12月 06 15:31:02     localhost.localdomain sshd[19259]: This private key     will be ignored.
+    12月 06 15:31:02 localhost.localdomain sshd[19259]:     Unable to load host key "/etc/ssh/    ssh_host_ed25519_key": bad permissi12月 06 15:31:02     localhost.localdomain sshd[19259]: Unable to load   host   key: /etc/ssh/ssh_host_ed25519_key
+    12月 06 15:31:02 localhost.localdomain sshd[19259]:     sshd: no hostkeys available -- exiting.
+    12月 06 15:31:02 localhost.localdomain sshd[19259]:   [失  败]
+    12月 06 15:31:02 localhost.localdomain systemd[1]:     sshd.service: control process exited, code=exited     status=1
+    12月 06 15:31:02 localhost.localdomain systemd[1]:     Failed to start SYSV: OpenSSH server daemon.
+    -- Subject: Unit sshd.service has failed
+    -- Defined-By: systemd
+    -- Support: http://lists.freedesktop.org/mailman/    listinfo/systemd-devel
+    --
+    -- Unit sshd.service has failed.
+    --
+    -- The result is failed.
+    ```
+  
+    解决方法
+  
+    ``` shell
+    rm /etc/ssh/ssh_host_rsa_key
+    rm /etc/ssh/ssh_host_ecdsa_key
+    rm /etc/ssh/ssh_host_ed25519_key
+    ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key
+    ssh-keygen -t ecdsa -f /etc/ssh/ssh_host_ecdsa_key
+    ssh-keygen -t dsa -f /etc/ssh/ssh_host_ed25519_key
+    systemctl restart sshd
+    ```
+
+  - 之后可能会出现密码正确却无法登录,或者直接无法连接
+
+    - 密码正确却无法登录解决方法：修改 /etc/pam.d/sshd 文件
+
+      ```shell
+      vi /etc/pam.d/sshd
+      ```
+      
+      修改后
+      ``` shell
+      [root@localhost x86_64]# cat /etc/pam.d/sshd
+      #%PAM-1.0
+      auth       required     pam_sepermit.so
+      auth       include      password-auth
+      account    required     pam_nologin.so
+      account    include      password-auth
+      password   include      password-auth
+      ## pam_selinux.so close should be the first session       rule
+      session    required     pam_selinux.so close
+      session    required     pam_loginuid.so
+      ## pam_selinux.so open should only be followed by         sessions to be executed in the user context
+      session    required     pam_selinux.so open env_params
+      session    optional     pam_keyinit.so force revoke
+      session    include      password-auth
+      ```
+
+    - 无法登录：直接删掉用户目录下 .ssh/known_hosts
+
+      - Windows 路径：C:\\Users\\(用户名)\\.ssh\\
+        
+      - Linux 路径: ~/.ssh/   
+
+
+打包及错误参考：
+
+https://www.cnblogs.com/fsckzy/p/10834550.html
+
+http://www.freesion.com/article/8919180853/
+
+https://blog.51cto.com/13654115/2452631
+
+https://blog.csdn.net/hyholine/article/details/7362073
+
+https://www.cnblogs.com/hm-zhang/p/6232076.html
+
+https://blog.csdn.net/watsy/article/details/12611919
