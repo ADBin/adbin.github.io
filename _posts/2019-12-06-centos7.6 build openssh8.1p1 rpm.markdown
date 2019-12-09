@@ -209,7 +209,7 @@ categories: linux centos 7 Openssh rpm
       - Linux 路径: ~/.ssh/   
 
 
-打包及错误参考：
+**参考**：
 
 [https://www.cnblogs.com/fsckzy/p/10834550.html](https://www.cnblogs.com/fsckzy/p/10834550.html)
 
