@@ -79,7 +79,7 @@ categories: linux centos 7 nginx tengine
      ```
 	 
 
-- 附 tengine 服务配置文件
+- **附 tengine 服务配置文件**
 
   - 服务目录： /usr/lib/systemd/system/
 
