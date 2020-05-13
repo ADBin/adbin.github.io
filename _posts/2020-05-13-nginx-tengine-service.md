@@ -10,7 +10,7 @@ categories: linux centos 7 nginx tengine
   - CentOS Linux release 7.6.1810 (Core)
 
     ```shell
-	[root@localhost system]# cat /etc/redhat-release
+	[root@localhost]# cat /etc/redhat-release
 	CentOS Linux release 7.6.1810 (Core)
 	```
 
@@ -22,17 +22,18 @@ categories: linux centos 7 nginx tengine
     ```
 
   - tengine是编译安装
+  
     - 编译参数：
 	  
-	  ``` shell
-      [root@localhost system]# /usr/local/tengine/sbin/nginx -V
+      ``` shell
+      [root@localhost]# /usr/local/tengine/sbin/nginx -V
       Tengine version: Tengine/2.3.2
       nginx version: nginx/1.17.3
       built by gcc 4.8.5 20150623 (Red Hat 4.8.5-39) (GCC)
       built with OpenSSL 1.0.2k-fips  26 Jan 2017
       TLS SNI support enabled
       configure arguments: --prefix=/usr/local/tengine --with-http_stub_status_module --with-http_ssl_module
-	  ```	 
+      ```	 
 
 
 
@@ -43,7 +44,7 @@ categories: linux centos 7 nginx tengine
 	 - 服务目录： /usr/lib/systemd/system/
 
 	   ``` shell
-		cd /usr/lib/systemd/system/
+	        cd /usr/lib/systemd/system/
 		vim nginx.service
 
 		--------------nginx.service------------------
@@ -68,14 +69,14 @@ categories: linux centos 7 nginx tengine
      
 	 ``` shell
 	 systemctl start nginx
-     ```
+         ```
 
    - #### 三、开启自启（前提是第二部能通过）
 
      ``` shell
-	 systemctl stop nginx
-	 systemctl enable nginx
-	 systemctl start nginx
+     systemctl stop nginx
+     systemctl enable nginx
+     systemctl start nginx
      ```
 	 
 
