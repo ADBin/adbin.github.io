@@ -12,7 +12,7 @@ categories: linux centos 7 nginx tengine
     ```shell
 	[root@localhost]# cat /etc/redhat-release
 	CentOS Linux release 7.6.1810 (Core)
-	```
+    ```
 
   - nginx为yum安装，源为nginx官方源
     
@@ -63,13 +63,13 @@ categories: linux centos 7 nginx tengine
 
 		[Install]
 		WantedBy=multi-user.target
-       ```
+           ```
 
    - #### 二、测试能不能起来
      
-	 ``` shell
-	 systemctl start nginx
-         ```
+     ``` shell
+     systemctl start nginx
+     ```
 
    - #### 三、开启自启（前提是第二部能通过）
 
