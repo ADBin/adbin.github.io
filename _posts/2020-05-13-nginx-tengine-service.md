@@ -64,13 +64,13 @@ categories: linux centos 7 nginx tengine
 		WantedBy=multi-user.target
        ```
 
- - #### 二、测试能不能起来
+   - #### 二、测试能不能起来
      
 	 ``` shell
 	 systemctl start nginx
      ```
 
- - #### 三、开启自启（前提是第二部能通过）
+   - #### 三、开启自启（前提是第二部能通过）
 
      ``` shell
 	 systemctl stop nginx
