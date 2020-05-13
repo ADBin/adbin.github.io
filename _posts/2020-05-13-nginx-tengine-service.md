@@ -38,7 +38,7 @@ categories: linux centos 7 nginx tengine
 
 - 自启配置
   
-  1. 一、建立服务
+  - 一、建立服务
      
 	 - 服务目录： /usr/lib/systemd/system/
 
@@ -64,13 +64,13 @@ categories: linux centos 7 nginx tengine
 		WantedBy=multi-user.target
        ```
 
-  2. 二、测试能不能起来
+ - 二、测试能不能起来
      
 	 ``` shell
 	 systemctl start nginx
      ```
 
-  3. 三、开启自启（前提是第二部能通过）
+ - 三、开启自启（前提是第二部能通过）
 
      ``` shell
 	 systemctl stop nginx
