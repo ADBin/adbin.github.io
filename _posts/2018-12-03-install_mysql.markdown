@@ -17,7 +17,7 @@ categories: linux centos 7 mysql
    3. **安装mysql源**
 
       ```shell
-      yum localinstall mysql57-community-release-el7-8.noarch.rpm
+      yum localinstall mysql57-community-release-el7-8.noarch.rpm -y
       ```
 
    4. **检查mysql源是否安装成功**
