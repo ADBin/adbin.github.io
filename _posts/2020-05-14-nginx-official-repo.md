@@ -22,7 +22,7 @@ categories: linux centos 7 nginx official
   ------------------nginx.repo--------------------------  
   [nginx-stable]
   name=nginx stable repo
-  baseurl=http://nginx.org/packages/centos/7/$basearch/
+  baseurl=https://nginx.org/packages/centos/7/$basearch/
   gpgcheck=1
   enabled=1
   gpgkey=https://nginx.org/keys/nginx_signing.key
