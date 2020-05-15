@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "centos7 配置 nginx 官方源"
+title:  "Nginx 代理"
 date:   "2020-05-15 10:58:54"
 categories: linux centos 7 nginx proxy
 ---
