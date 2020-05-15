@@ -5,6 +5,7 @@ date:   "2020-05-13 16:04:54"
 categories: linux centos 7 nginx tengine
 ---
 
+## centos7 配置 nginx tengine 服务及自启
 
 - ### 环境：
   - CentOS Linux release 7.6.1810 (Core)
