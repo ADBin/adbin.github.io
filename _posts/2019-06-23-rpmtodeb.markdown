@@ -5,6 +5,8 @@ date:   2019-06-23 16:19:22
 categories: linux deb rpm dpkg
 ---
 
+## rpm包转deb包及安装
+
 ### 下面以百度网盘的rpm包为例
 
 #### **系统**：Linux Mint 19 Tara
