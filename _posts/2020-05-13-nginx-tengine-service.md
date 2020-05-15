@@ -25,7 +25,7 @@ categories: linux centos 7 nginx tengine
   - tengine是编译安装
   
     - 编译参数：
-	  
+    
       ``` shell
       [root@localhost]# /usr/local/tengine/sbin/nginx -V
       Tengine version: Tengine/2.3.2
@@ -42,29 +42,29 @@ categories: linux centos 7 nginx tengine
   
   - #### 一、建立服务
      
-	 - 服务目录： /usr/lib/systemd/system/
+    - 服务目录： /usr/lib/systemd/system/
 
-	    ``` shell
-    	    cd /usr/lib/systemd/system/
-    	    vim nginx.service
+      ``` shell
+      cd /usr/lib/systemd/system/
+      vim nginx.service
 
-	    --------------nginx.service------------------
-	    [Unit]
-	    Description=nginx - high performance web server
-	    Documentation=http://nginx.org/en/docs/
-	    After=network-online.target remote-fs.target nss-lookup.target
-	    Wants=network-online.target
+      --------------nginx.service------------------
+      [Unit]
+      Description=nginx - high performance web server
+      Documentation=http://nginx.org/en/docs/
+      After=network-online.target remote-fs.target nss-lookup.target
+      Wants=network-online.target
 
-	    [Service]
-	    Type=forking
-	    PIDFile=/var/run/nginx.pid
-	    ExecStart=/usr/sbin/nginx -c /etc/nginx/nginx.conf
-	    ExecReload=/bin/kill -s HUP $MAINPID
-	    ExecStop=/bin/kill -s TERM $MAINPID
+      [Service]
+      Type=forking
+      PIDFile=/var/run/nginx.pid
+      ExecStart=/usr/sbin/nginx -c /etc/nginx/nginx.conf
+      ExecReload=/bin/kill -s HUP $MAINPID
+      ExecStop=/bin/kill -s TERM $MAINPID
 
-	    [Install]
-	    WantedBy=multi-user.target
-           ```
+      [Install]
+      WantedBy=multi-user.target
+      ```
 
    - #### 二、测试能不能起来
      
