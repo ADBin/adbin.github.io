@@ -52,7 +52,7 @@ categories: linux centos 7 nginx proxy
 
     ``` shell
     upstream apiName{
-        http://ip:port;
+        server http://ip:port;
     }
     ```
   
