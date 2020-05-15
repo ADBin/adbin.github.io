@@ -5,7 +5,9 @@ date:   2019-12-06 17:01:36
 categories: linux centos 7 Openssh rpm
 ---
 
-## 环境
+## Centos 7.6(1810) 打包Openssh8.1p1
+
+### 环境
  
   ```shell
   [root@localhost frp_s]# cat /etc/redhat-release
