@@ -5,7 +5,9 @@ date:   "2020-05-14 09:56:50"
 categories: linux centos 7 nginx official
 ---
 
-- 环境：
+## Centos 7 配置 Nginx 官方源
+
+- ### 环境：
   - CentOS Linux release 7.6.1810 (Core)
 
     ```shell
@@ -14,7 +16,7 @@ categories: linux centos 7 nginx official
 	```
 
 
-- 一、配置官方源  
+- ### 一、配置官方源  
 
   ``` shell
   [root@localhost]# vim /etc/yum.repos.d/nginx.repo
@@ -29,17 +31,17 @@ categories: linux centos 7 nginx official
   module_hotfixes=true
   ```
 
-- 二、建立缓存
+- ### 二、建立缓存
 
   ``` shell
   yum makecache
   ```
    
-- 三、安装
+- ### 三、安装
 
   ``` shell
   yum install nginx
   ```
 
 
-- 附：[nginx官网文档](https://nginx.org/en/linux_packages.html)
+- **附：**[nginx官网文档](https://nginx.org/en/linux_packages.html)
