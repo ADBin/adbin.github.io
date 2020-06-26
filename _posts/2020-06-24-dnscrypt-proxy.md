@@ -41,8 +41,10 @@ categories: linux centos 7 dnscrypt-proxy dns
   vi dnscrypt-proxy.toml
   ```
 
-  > 主要：
+  > 基础参数：
+  >
   > server_names = ['alidns-doh','adguard-dns','adguard-dns-doh']   dns服务器名（获取文件：./public-resolvers.md）
+  >
   > listen_addresses = ['127.0.0.1:53']   监听地址
 
 -  #### 四、启动
