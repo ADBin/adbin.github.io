@@ -11,9 +11,10 @@ categories: linux centos 7 dnscrypt-proxy dns
   - CentOS Linux release 7.6.1810 (Core)
 
     ```shell
-	[root@localhost system]# cat /etc/redhat-release
-	CentOS Linux release 7.6.1810 (Core)
-	```
+    [root@localhost system]# cat /etc/redhat-release
+    CentOS Linux release 7.6.1810 (Core)
+    ```
+
 - #### 一、安装依赖
     
   ``` shell
@@ -32,7 +33,7 @@ categories: linux centos 7 dnscrypt-proxy dns
     wget https://adbin.top/md/dnscrypt-proxy-linux_x86_64-2.0.44.tar.gz
     ```
 
--  #### 三、解压并配置
+- #### 三、解压并配置
   
   ``` shell
   tar -zxf dnscrypt-proxy-linux_x86_64-2.0.44.tar.gz
@@ -47,7 +48,7 @@ categories: linux centos 7 dnscrypt-proxy dns
   >
   > listen_addresses = ['127.0.0.1:53']   监听地址
 
--  #### 四、启动
+- #### 四、启动
   
   ``` shell
   ./dnscrypt-proxy &
