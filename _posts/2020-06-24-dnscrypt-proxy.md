@@ -15,7 +15,7 @@ categories: linux centos 7 dnscrypt-proxy dns
     CentOS Linux release 7.6.1810 (Core)
     ```
 
-- #### 一、安装依赖
+- #### 一、安装依赖 （似乎可以不用装也能跑起来）
     
   ``` shell
   yum install libsodium [libsodium13]??
