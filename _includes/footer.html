@@ -19,7 +19,9 @@
 
 </footer>
 
-<script src="https://adbin.github.io/js/live2d.js"></script>
+<!-- <script src="https://adbin.github.io/js/live2d.js"></script> -->
+<script src="/js/live2d.js"></script>
+
 <!-- <script src="https://adbin.github.io/fallingsnow/js/jquery.fallingsnow.min.js"></script> -->
 <script type="text/javascript">
      //$( "#snow" ).fallingSnow();
@@ -31,7 +33,9 @@
           $('.waifu').remove();
     }else {
         /*console.log("现在是PC端")*/
-          loadlive2d("live2d", "https://adbin.github.io/live2d/33/33.json");
+          loadlive2d("live2d", "/live2d/33/33.json");
+//           loadlive2d("live2d", "https://adbin.github.io/live2d/33/33.json");
+          
           $('.site-footer').css("margin-top","80px");
           
     }
